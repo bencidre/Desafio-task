@@ -1,3 +1,3 @@
-import { Task } from "./types/task";
+import { Task } from './types/task'
 
-export const tasks: Task[] = [];
+export const tasks: Task[] = []

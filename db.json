@@ -207,6 +207,30 @@
       "completed_at": null,
       "created_at": "2025-07-10T00:13:12.482Z",
       "updated_at": "2025-07-10T00:13:12.482Z"
+    },
+    {
+      "id": "9a845eb7-5d16-4d8f-b8c4-8a5fa94058c2",
+      "title": "Estudar Fastify",
+      "description": "Terminar desafio do curso",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:32:04.102Z",
+      "updated_at": "2025-07-10T00:32:04.102Z"
+    },
+    {
+      "id": "00af5e47-53b4-4e00-8a28-c6c2e150795b",
+      "title": "Aprender TypeScript",
+      "description": "Praticar generics e interfaces",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:32:04.103Z",
+      "updated_at": "2025-07-10T00:32:04.103Z"
+    },
+    {
+      "id": "d099e33a-77ca-44c8-928e-3a469e26a081",
+      "title": "Revisar JavaScript",
+      "description": "Estudar escopo e closures",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:32:04.104Z",
+      "updated_at": "2025-07-10T00:32:04.104Z"
     }
   ]
 }
