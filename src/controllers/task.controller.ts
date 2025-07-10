@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply, FastifyInstance } from 'fastify';
-import { parse } from 'fast-csv';
+import { parse } from 'csv-parse';
 import { v4 as uuidv4 } from 'uuid';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -123,11 +123,11 @@ export async function importTasks(request: FastifyRequest, reply: FastifyReply) 
     });
 
     await new Promise<void>((resolve, reject) => {
-  fs.createReadStream(tempFilePath)
-    .pipe(parse({ delimiter: ',', trim: true, headers: true }))
-    .on('data', async (row: Record<string, string>) => {
-      console.log('🧾 Linha CSV recebida:', row); // ADICIONE ESTE LOG
+  const tasksToInsert: Task[] = [];
 
+  fs.createReadStream(tempFilePath)
+    .pipe(parse({ columns: true, skip_empty_lines: true }))
+    .on('data', (row: { title: string; description: string }) => {
       if (row.title && row.description) {
         const task: Task = {
           id: uuidv4(),
@@ -138,13 +138,19 @@ export async function importTasks(request: FastifyRequest, reply: FastifyReply) 
           updated_at: new Date()
         };
 
-        await db.insert('tasks', task);
-        importedCount++;
+        tasksToInsert.push(task);
       }
     })
-    .on('end', () => {
-      fs.unlinkSync(tempFilePath);
-      resolve();
+    .on('end', async () => {
+      try {
+        await Promise.all(tasksToInsert.map(task => db.insert('tasks', task)));
+        importedCount = tasksToInsert.length;
+
+        fs.unlinkSync(tempFilePath); // limpa o arquivo temporário
+        resolve();
+      } catch (err) {
+        reject(err);
+      }
     })
     .on('error', reject);
 });

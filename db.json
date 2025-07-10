@@ -159,6 +159,54 @@
       "completed_at": null,
       "created_at": "2025-07-10T00:05:03.347Z",
       "updated_at": "2025-07-10T00:05:03.347Z"
+    },
+    {
+      "id": "7bef2d60-5c96-4a6e-b926-ca098cc4adca",
+      "title": "Estudar Fastify",
+      "description": "Terminar desafio do curso",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:08:27.499Z",
+      "updated_at": "2025-07-10T00:08:27.499Z"
+    },
+    {
+      "id": "6dd14f54-bb44-44b0-9e49-f33178d1a793",
+      "title": "Aprender TypeScript",
+      "description": "Praticar generics e interfaces",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:08:27.500Z",
+      "updated_at": "2025-07-10T00:08:27.500Z"
+    },
+    {
+      "id": "05df8e72-1666-4e04-b0c1-79962e32a997",
+      "title": "Revisar JavaScript",
+      "description": "Estudar escopo e closures",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:08:27.500Z",
+      "updated_at": "2025-07-10T00:08:27.500Z"
+    },
+    {
+      "id": "1c789898-8fe9-439b-9c22-5b0eff0aba86",
+      "title": "Estudar Fastify",
+      "description": "Terminar desafio do curso",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:13:12.481Z",
+      "updated_at": "2025-07-10T00:13:12.481Z"
+    },
+    {
+      "id": "5e9ac62c-abbe-49bc-b3ff-f3b39605139a",
+      "title": "Aprender TypeScript",
+      "description": "Praticar generics e interfaces",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:13:12.482Z",
+      "updated_at": "2025-07-10T00:13:12.482Z"
+    },
+    {
+      "id": "e2cb829f-fa60-4e1a-8927-9eff22d6cf3d",
+      "title": "Revisar JavaScript",
+      "description": "Estudar escopo e closures",
+      "completed_at": null,
+      "created_at": "2025-07-10T00:13:12.482Z",
+      "updated_at": "2025-07-10T00:13:12.482Z"
     }
   ]
 }
